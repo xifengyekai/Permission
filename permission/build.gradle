@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 
+
 android {
     compileSdkVersion 28
 
@@ -26,4 +27,120 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
+}
+
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+def siteUrl = 'https://github.com/xifengyekai/Permission'
+def gitUrl = 'https://github.com/xifengyekai/Permission.git'
+
+def libraryName = 'permisson'
+group = 'com.llm.permission'
+version = '1.0.0'
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                // project description
+                name 'is permission library for android'
+                url siteUrl
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'luoliming'
+                        name 'llm'
+                        email 'xifengyekai@126.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+
+// 生成jar包的task，不需要修改。
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+// 生成javaDoc的jar，不需要修改
+task javadoc(type: Javadoc) {
+    options.encoding = "UTF-8"
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+task copyDoc(type: Copy) {
+    from "${buildDir}/docs/"
+    into "docs"
+}
+
+//设置编码格式，如果不设置可能会在gradlew install的时候出现GBK编码映射错误
+javadoc {
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        author true
+        version true
+        links "http://docs.oracle.com/javase/7/docs/api"
+        title 'A Permission Library For Android'   // 文档标题
+    }
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+// 生成jar包
+task releaseJar(type: Copy) {
+    from('build/intermediates/bundles/release')
+    into('../jar')
+    include('classes.jar')
+    rename('classes.jar', 'permission-' + version + '.jar')
+}
+
+// 这里是读取Bintray相关的信息，上传项目到github上的时候会把gradle文件传上去，
+// 所以不要把帐号密码的信息直接写在这里，写在local.properties中，这里动态读取。
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+bintray {
+
+    //读取 local.properties 文件里面的 bintray.user
+    user = properties.getProperty("bintray.user")
+    //读取 local.properties 文件里面的 bintray.apikey
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+
+    pkg {
+        //发布到JCenter的组织，注意新版本的bintray是需要手动创建的
+        userOrg = "lmsoft"
+        //发布到JCenter上的仓库名称，注意新版本的bintray是需要手动创建的
+        repo = "android"
+        // 发布到Bintray上的项目名字
+        name = libraryName
+        desc = 'is permission library for android'
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true  // 是否是公开项目
+    }
 }

@@ -11,7 +11,6 @@ import com.llm.permission.callback.SpecialPermissionCallback;
  * 权限请求器
  *
  * @author v_luoliming01
- * @date 2019-06-28 10:19
  */
 public class PermissionRequester {
     private static final String TAG = PermissionRequester.class.getSimpleName();

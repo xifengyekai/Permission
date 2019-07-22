@@ -14,7 +14,6 @@ import java.lang.reflect.Proxy;
  * 创建权限检查员工厂类
  *
  * @author v_luoliming01
- * @date 2019-07-03 15:51
  */
 public class PermissionExaminerFactory {
     private static final String TAG = PermissionExaminerFactory.class.getSimpleName();

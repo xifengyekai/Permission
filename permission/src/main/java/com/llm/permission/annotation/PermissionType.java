@@ -6,7 +6,6 @@ import android.support.annotation.IntDef;
  * 权限类型
  *
  * @author v_luoliming01
- * @date 2019-07-03 16:00
  */
 @IntDef(value = {PermissionType.PERMISSION_DANGEROUS, PermissionType.PERMISSION_SPECIAL})
 public @interface PermissionType {

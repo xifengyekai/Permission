@@ -10,7 +10,6 @@ import com.llm.activityresult.fragment.ResultFragmentFactory;
  * 先init，再startActivityForResult
  *
  * @author v_luoliming01
- * @date 2019-07-05 15:30
  */
 public class ActivityResultHelper {
 

@@ -14,7 +14,6 @@ import com.llm.activityresult.util.Tools;
  * 发起startActivityForResult fragment
  *
  * @author v_luoliming01
- * @date 2019-07-05 14:24
  */
 public class ResultSupportFragment extends Fragment implements IStartActivityAction {
     public static final String TAG = ResultSupportFragment.class.getSimpleName();

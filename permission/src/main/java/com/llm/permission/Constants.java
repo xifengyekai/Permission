@@ -4,7 +4,6 @@ package com.llm.permission;
  * 常量类
  *
  * @author v_luoliming01
- * @date 2019-07-03 11:33
  */
 public final class Constants {
     /**

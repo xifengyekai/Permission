@@ -16,7 +16,6 @@ import java.lang.reflect.Method;
  * AppOpsManager 检查权限
  *
  * @author v_luoliming01
- * @date 2019-07-03 14:15
  */
 public class AppOpsPermissionExaminer implements IPermissionExaminer {
     private static final String TAG = AppOpsPermissionExaminer.class.getSimpleName();
@@ -31,7 +30,7 @@ public class AppOpsPermissionExaminer implements IPermissionExaminer {
      * 检查权限
      *
      * @param permission 权限
-     * @return
+     * @return 是否授予权限
      */
     @Override
     public boolean checkPermission(@NonNull String permission) {

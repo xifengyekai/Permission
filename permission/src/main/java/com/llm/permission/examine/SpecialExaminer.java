@@ -14,7 +14,6 @@ import com.llm.permission.bean.SpecialPermission;
  * 特殊权限检查员
  *
  * @author v_luoliming01
- * @date 2019-07-03 16:11
  */
 public class SpecialExaminer implements IPermissionExaminer {
     @Override

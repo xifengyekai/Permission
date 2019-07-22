@@ -19,7 +19,6 @@ import java.lang.reflect.Proxy;
  * 生产 implement IRequestPermissionAction 的 fragment
  *
  * @author v_luoliming01
- * @date 2019-06-27 16:42
  */
 public class PermissionFragmentFactory {
     private static final String TAG = PermissionFragmentFactory.class.getSimpleName();
@@ -70,7 +69,7 @@ public class PermissionFragmentFactory {
     /**
      * 创建代理 IRequestPermissionAction 对象
      *
-     * @return
+     * @return 代理对象
      */
     public static IRequestPermissionAction createFragmentProxy() {
         final IRequestPermissionAction target = create(PermissionUtils.getTopActivity());

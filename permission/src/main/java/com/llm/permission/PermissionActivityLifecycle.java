@@ -12,7 +12,6 @@ import java.lang.ref.WeakReference;
  * write the class description
  *
  * @author v_luoliming01
- * @date 2019-06-27 17:29
  */
 public class PermissionActivityLifecycle implements Application.ActivityLifecycleCallbacks {
     private static final String TAG = PermissionActivityLifecycle.class.getSimpleName();

@@ -14,7 +14,6 @@ import java.lang.reflect.Proxy;
  * ResultFragment 工厂类
  *
  * @author v_luoliming01
- * @date 2019-07-05 14:58
  */
 public class ResultFragmentFactory {
     private static final String FRAGMENT_TAG = "result_fragment";

@@ -6,7 +6,6 @@ import android.content.Intent;
  * startActivityForResult 回调接口
  *
  * @author v_luoliming01
- * @date 2019-07-05 14:21
  */
 public interface ResultCallback {
     /**

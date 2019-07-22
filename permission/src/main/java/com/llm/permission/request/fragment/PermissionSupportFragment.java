@@ -24,7 +24,6 @@ import com.llm.permission.request.IRequestPermissionAction;
  * Support/Androidx 权限请求fragment
  *
  * @author v_luoliming01
- * @date 2019-06-27 11:50
  */
 public class PermissionSupportFragment extends Fragment implements IRequestPermissionAction {
     private static final String TAG = PermissionSupportFragment.class.getSimpleName();

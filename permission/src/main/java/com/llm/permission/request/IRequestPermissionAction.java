@@ -8,7 +8,6 @@ import com.llm.permission.callback.SpecialPermissionCallback;
  * 请求权限
  *
  * @author v_luoliming01
- * @date 2019-06-27 15:42
  */
 public interface IRequestPermissionAction {
 

@@ -29,7 +29,6 @@ import java.util.Set;
  * permission 工具类
  *
  * @author v_luoliming01
- * @date 2019-06-28 10:32
  */
 public class PermissionUtils {
 
@@ -180,10 +179,10 @@ public class PermissionUtils {
     }
 
     /**
-     * Permission[] -> String[]
+     * Permission[] 转成 String[]
      *
-     * @param permissions
-     * @return
+     * @param permissions permission数组
+     * @return 字符窜权限数组
      */
     public static String[] buildPermissions(@NonNull Permission[] permissions) {
         String[] array = new String[permissions.length];

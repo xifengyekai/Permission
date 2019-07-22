@@ -6,7 +6,6 @@ import com.llm.permission.bean.SpecialPermission;
  * 特殊权限回调
  *
  * @author v_luoliming01
- * @date 2019-07-04 16:55
  */
 public interface SpecialPermissionCallback {
     /**

@@ -10,7 +10,6 @@ import java.util.Locale;
  * 日志工具
  *
  * @author v_luoliming01
- * @date 2019-06-27 14:30
  */
 public final class Logger {
     /**

@@ -12,7 +12,6 @@ import com.llm.permission.log.Logger;
  * 动态权限检查
  *
  * @author v_luoliming01
- * @date 2019-07-03 11:58
  */
 public class RuntimePermissionExaminer implements IPermissionExaminer {
     @Override

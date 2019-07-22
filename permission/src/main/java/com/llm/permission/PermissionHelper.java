@@ -26,7 +26,6 @@ import com.llm.permission.request.PermissionRequester;
  * 权限辅助器
  *
  * @author v_luoliming01
- * @date 2019-06-27 17:13
  */
 public class PermissionHelper {
     private static final String TAG = PermissionHelper.class.getSimpleName();
@@ -47,7 +46,6 @@ public class PermissionHelper {
      * 初始化
      *
      * @param application
-     * @return
      */
     public void init(Application application) {
         if (alreadyInit) {
@@ -62,7 +60,6 @@ public class PermissionHelper {
      * 自动初始化
      *
      * @param context Application Context
-     * @return
      */
     public void autoInit(Context context) {
         if (!(context instanceof Application)) {

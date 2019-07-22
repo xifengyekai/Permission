@@ -8,7 +8,6 @@ import java.util.Arrays;
  * Permission 包装类
  *
  * @author v_luoliming01
- * @date 2019-06-27 14:25
  */
 public class Permission {
     /**

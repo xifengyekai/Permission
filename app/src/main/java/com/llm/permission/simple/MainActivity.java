@@ -38,7 +38,11 @@ public class MainActivity extends AppCompatActivity {
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         Uri uri = Uri.parse("tel://10086");
                         intent.setData(uri);
-                        startActivity(intent);
+                        if (getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
+                            startActivity(intent);
+                        } else {
+                            // 找不到对应Activity
+                        }
                         Logger.d("授予权限", permission.toString());
                     }
 

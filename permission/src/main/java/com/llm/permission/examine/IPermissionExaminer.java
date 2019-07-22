@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
  * 权限检查员
  *
  * @author v_luoliming01
- * @date 2019-07-03 11:55
  */
 public interface IPermissionExaminer {
     /**

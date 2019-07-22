@@ -10,7 +10,6 @@ import java.lang.annotation.RetentionPolicy;
  * 通知开关/系统弹窗/未知来源应用安装权限
  *
  * @author v_luoliming01
- * @date 2019-07-04 15:30
  */
 @Retention(RetentionPolicy.SOURCE)
 @StringDef(value = {

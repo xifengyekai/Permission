@@ -24,7 +24,6 @@ import static android.os.Build.VERSION_CODES.M;
  * 请求权限fragment（android.app.Fragment）
  *
  * @author v_luoliming01
- * @date 2019-06-27 11:47
  */
 public class PermissionFragment extends Fragment implements IRequestPermissionAction {
     private static final String TAG = PermissionFragment.class.getSimpleName();

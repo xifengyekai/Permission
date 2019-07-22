@@ -14,7 +14,6 @@ import com.llm.permission.log.Logger;
  * 初始化permission库
  *
  * @author v_luoliming01
- * @date 2019-07-03 10:09
  */
 public class InitPermissionProvider extends ContentProvider {
     @Override

@@ -6,7 +6,6 @@ import android.content.Intent;
  * startActivity Action
  *
  * @author v_luoliming01
- * @date 2019-07-05 14:33
  */
 public interface IStartActivityAction {
     /**
