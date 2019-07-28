@@ -16,11 +16,13 @@ android runtime permission library/Android 运行时权限库
     implementation 'com.llm.permission:permission:1.0.0'
 
 注意：如果是Android X 项目引入本库需要在项目 gradle.properties 中做如下配置：
+
     1.方式一引入需添加：android.useAndroidX=true
     2.方式二引入需添加：android.enableJetifier=true
     
 # 用法
 1.请求Runtime Permission:
+
     单个权限：
         PermissionHelper.getInstance().checkAndRequestPermission(
                         Manifest.permission.CALL_PHONE, new PermissionCallback() {
@@ -57,6 +59,7 @@ android runtime permission library/Android 运行时权限库
                         });
                         
 2.请求特殊权限：
+
     PermissionHelper.getInstance().checkAndRequestPermission(SpecialPermission.SYSTEM_ALERT_WINDOW,
                     new SpecialPermissionCallback() {
                         @Override
@@ -75,6 +78,7 @@ android runtime permission library/Android 运行时权限库
                 SpecialPermission.UNKNOWN_APP_SOURCE,8.0安装未知来源的应用权限
 
 3.startActivityForResult
+
     step1:
         ActivityResultHelper.init(activity)
                         .startActivityForResult(SetResultActivity.class, new ResultCallback() {
